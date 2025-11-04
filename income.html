@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemasukan - Labaku</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header-bar"><h2>Kasir Otomatis</h2></header>
+
+    <main>
+      <section class="summary grid-3">
+        <div class="card"><h4>Total Hari Ini</h4><p id="incomeToday">Rp 0</p></div>
+        <div class="card"><h4>Diskon</h4><p id="discountToday">Rp 0</p></div>
+        <div class="card"><h4>Pajak</h4><p id="taxToday">Rp 0</p></div>
+      </section>
+
+      <form class="form-section" id="incomeForm">
+        <div class="form-row">
+          <label>Tanggal</label>
+          <p id="incomeDate" class="muted"></p>
+        </div>
+
+        <label>Nama Produk</label>
+        <input type="text" id="prodName" placeholder="Contoh: Brownies Lumer" required>
+
+        <div class="grid-2">
+          <div>
+            <label>Jumlah</label>
+            <input type="number" id="qty" placeholder="10" min="1" required>
+          </div>
+          <div>
+            <label>Harga/Unit (Rp)</label>
+            <input type="number" id="unitPrice" placeholder="15000" min="0" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <label>Diskon (Rp)</label>
+            <input type="number" id="discount" placeholder="0" min="0">
+          </div>
+          <div>
+            <label>Pajak (Rp)</label>
+            <input type="number" id="tax" placeholder="0" min="0">
+          </div>
+        </div>
+
+        <div class="calc-preview">
+          <span>Nomor Nota</span><span id="invoicePrev">-</span>
+          <span>Total (Auto)</span><span id="totalPrev">Rp 0</span>
+        </div>
+
+        <button type="submit" class="primary">Simpan Transaksi</button>
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="index.html">🏠</a>
+        <a href="report.html">📄</a>
+        <a href="profile.html">⚙️</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

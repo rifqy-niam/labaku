@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labaku - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header-bar">
+      <div class="profile-mini">
+        <div>
+          <h2 id="businessName">Labaku</h2>
+          <p id="businessType">UMKM</p>
+          <small id="recapMode">Mode Rekap: Harian</small>
+        </div>
+        <button class="icon-btn" title="Ganti Tema" onclick="toggleTheme()">🌗</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary">
+        <div class="card">
+          <div class="icon">💰</div>
+          <div>
+            <h3>Pemasukan</h3>
+            <p id="income-total">Rp 0</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon">💸</div>
+          <div>
+            <h3>Pengeluaran</h3>
+            <p id="expense-total">Rp 0</p>
+          </div>
+        </div>
+        <div class="card highlight">
+          <div class="icon">📈</div>
+          <div>
+            <h3>Laba Bersih</h3>
+            <p id="profit-total">Rp 0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button class="primary" onclick="navigate('income.html')">+ Pemasukan</button>
+        <button class="secondary" onclick="navigate('expense.html')">+ Pengeluaran</button>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="index.html" class="active">🏠</a>
+        <a href="report.html">📄</a>
+        <a href="profile.html">⚙️</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

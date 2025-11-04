@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Usaha - Labaku</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header-bar"><h2>Profil Usaha</h2></header>
+
+    <main>
+      <form class="form-section" id="profileForm">
+        <label>Nama Usaha</label>
+        <input type="text" id="bizName" placeholder="Nama Usaha">
+
+        <label>Pemilik</label>
+        <input type="text" id="ownerName" placeholder="Nama Pemilik">
+
+        <label>Jenis Usaha</label>
+        <input type="text" id="bizType" placeholder="Makanan, Fashion, dll">
+
+        <label>Sistem Rekap</label>
+        <select id="recapModeSelect">
+          <option>Harian</option>
+          <option>Mingguan</option>
+          <option>Bulanan</option>
+          <option>Tahunan</option>
+        </select>
+
+        <label>Diskon Default (%)</label>
+        <input type="number" id="defaultDiscount" placeholder="0">
+
+        <label>Pajak Default (%)</label>
+        <input type="number" id="defaultTax" placeholder="11">
+
+        <button type="submit" class="primary">Simpan Profil</button>
+        <button type="button" class="secondary" onclick="toggleTheme()">🌗 Ganti Tema</button>
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="index.html">🏠</a>
+        <a href="report.html">📄</a>
+        <a href="profile.html" class="active">⚙️</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekap Keuangan - Labaku</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header-bar"><h2>Rekap Keuangan</h2></header>
+
+    <main>
+      <section class="filter-section">
+        <label>Periode</label>
+        <select id="filterMode">
+          <option>Harian</option>
+          <option>Mingguan</option>
+          <option>Bulanan</option>
+          <option>Tahunan</option>
+        </select>
+      </section>
+
+      <section class="report-summary">
+        <div class="card"><h4>Pemasukan</h4><p id="sumIncome">Rp 0</p></div>
+        <div class="card"><h4>Pengeluaran</h4><p id="sumExpense">Rp 0</p></div>
+        <div class="card highlight"><h4>Laba Bersih</h4><p id="sumProfit">Rp 0</p></div>
+      </section>
+
+      <section class="report-table" id="reportList">
+        <h4>Transaksi</h4>
+        <div id="listIncomes"></div>
+        <div id="listExpenses"></div>
+      </section>
+
+      <button id="exportCSV" class="secondary">Ekspor CSV</button>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="index.html">🏠</a>
+        <a href="report.html" class="active">📄</a>
+        <a href="profile.html">⚙️</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

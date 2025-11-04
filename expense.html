@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengeluaran - Labaku</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header-bar"><h2>Catat Pengeluaran</h2></header>
+
+    <main>
+      <form class="form-section" id="expenseForm">
+        <div class="form-row">
+          <label>Tanggal</label>
+          <p id="currentDate" class="muted"></p>
+        </div>
+
+        <label>Keterangan</label>
+        <input type="text" id="expDesc" placeholder="Contoh: Beli Tepung" required>
+
+        <label>Jumlah (Rp)</label>
+        <input type="number" id="expAmount" placeholder="25000" min="0" required>
+
+        <label>Kategori</label>
+        <select id="expCat">
+          <option>Bahan Baku</option>
+          <option>Tenaga Kerja</option>
+          <option>Operasional</option>
+        </select>
+
+        <button type="submit" class="primary">Simpan Pengeluaran</button>
+      </form>
+
+      <section class="summary grid-3">
+        <div class="card"><h4>Bahan Baku</h4><p id="totalBahan">Rp 0</p></div>
+        <div class="card"><h4>Tenaga Kerja</h4><p id="totalTenaga">Rp 0</p></div>
+        <div class="card"><h4>Operasional</h4><p id="totalOperasional">Rp 0</p></div>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="index.html">🏠</a>
+        <a href="report.html">📄</a>
+        <a href="profile.html">⚙️</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
