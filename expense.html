@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengeluaran - Labaku</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header center"><h2><i data-lucide="wallet"></i> Catat Pengeluaran</h2></header>
+
+    <main>
+      <form class="form-section card" id="expenseForm" autocomplete="off">
+        <div class="row two">
+          <div class="field">
+            <label>Tanggal</label>
+            <input id="currentDate" type="text" readonly>
+          </div>
+          <div class="field">
+            <label>Kategori</label>
+            <select id="exCategory">
+              <option>Bahan Baku</option>
+              <option>Tenaga Kerja</option>
+              <option>Operasional</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row two">
+          <div class="field">
+            <label>Keterangan</label>
+            <input id="exDesc" type="text" placeholder="Contoh: Beli Tepung" required>
+          </div>
+          <div class="field">
+            <label>Jumlah (Rp)</label>
+            <input id="exAmount" type="number" min="0" placeholder="25000" required>
+          </div>
+        </div>
+
+        <div class="actions two-btn">
+          <button type="submit" class="btn primary"><i data-lucide="save"></i><span>Simpan Pengeluaran</span></button>
+          <button type="button" class="btn ghost" onclick="navigate('index.html')"><i data-lucide="arrow-left"></i><span>Kembali</span></button>
+        </div>
+      </form>
+
+      <section class="summary grid-3">
+        <div class="card kpi"><h4>Bahan Baku</h4><p id="totalBahan">Rp 0</p></div>
+        <div class="card kpi"><h4>Tenaga Kerja</h4><p id="totalTenaga">Rp 0</p></div>
+        <div class="card kpi"><h4>Operasional</h4><p id="totalOperasional">Rp 0</p></div>
+      </section>
+    </main>
+
+    <footer class="tabbar">
+      <a href="index.html"><i data-lucide="home"></i><span>Beranda</span></a>
+      <a href="report.html"><i data-lucide="bar-chart-3"></i><span>Rekap</span></a>
+      <a href="profile.html"><i data-lucide="settings"></i><span>Profil</span></a>
+    </footer>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labaku - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Chart.js for charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header">
+      <div class="profile-mini">
+        <div class="brand">
+          <i data-lucide="calculator"></i>
+          <div>
+            <h2 id="businessName">Nama Usaha</h2>
+            <p id="businessType">Jenis Usaha</p>
+          </div>
+        </div>
+        <small id="recapMode">Mode Rekap: Harian</small>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary grid-3">
+        <div class="card kpi">
+          <h3>Pemasukan</h3>
+          <p id="income-total">Rp 0</p>
+        </div>
+        <div class="card kpi">
+          <h3>Pengeluaran</h3>
+          <p id="expense-total">Rp 0</p>
+        </div>
+        <div class="card kpi">
+          <h3>Laba Bersih</h3>
+          <p id="profit-total">Rp 0</p>
+        </div>
+      </section>
+
+      <section class="card chart-section">
+        <div class="chart-header">
+          <h4>Tren 7 Hari</h4>
+          <div class="chart-legend">
+            <span class="dot income"></span>Pemasukan
+            <span class="dot expense"></span>Pengeluaran
+            <span class="dot profit"></span>Laba
+          </div>
+        </div>
+        <canvas id="financeChart" height="140"></canvas>
+      </section>
+
+      <section class="actions two-btn">
+        <button class="btn primary" onclick="navigate('income.html')">
+          <i data-lucide="plus-circle"></i><span>Tambah Pemasukan</span>
+        </button>
+        <button class="btn outline" onclick="navigate('expense.html')">
+          <i data-lucide="minus-circle"></i><span>Tambah Pengeluaran</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="tabbar">
+      <a href="index.html" class="active" aria-label="Beranda"><i data-lucide="home"></i><span>Beranda</span></a>
+      <a href="report.html" aria-label="Rekap"><i data-lucide="bar-chart-3"></i><span>Rekap</span></a>
+      <a href="profile.html" aria-label="Profil"><i data-lucide="settings"></i><span>Profil</span></a>
+    </footer>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

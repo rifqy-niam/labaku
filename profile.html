@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Usaha - Labaku</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="mobile-frame">
+    <header class="header center"><h2><i data-lucide="settings"></i> Profil Usaha</h2></header>
+
+    <main>
+      <form class="form-section card" id="profileForm" autocomplete="off">
+        <div class="row two">
+          <div class="field">
+            <label>Nama Usaha</label>
+            <input type="text" id="bizName" placeholder="Nama Usaha" required>
+          </div>
+          <div class="field">
+            <label>Pemilik</label>
+            <input type="text" id="ownerName" placeholder="Nama Pemilik" required>
+          </div>
+        </div>
+
+        <div class="row two">
+          <div class="field">
+            <label>Jenis Usaha</label>
+            <input type="text" id="bizType" placeholder="Makanan, Fashion, dll" required>
+          </div>
+          <div class="field">
+            <label>Sistem Rekap</label>
+            <select id="recapModeSelect">
+              <option>Harian</option>
+              <option>Mingguan</option>
+              <option>Bulanan</option>
+              <option>Tahunan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row two">
+          <div class="field">
+            <label>Diskon Default (%)</label>
+            <input type="number" id="defaultDiscount" min="0" value="0">
+          </div>
+          <div class="field">
+            <label>Pajak Default (%)</label>
+            <input type="number" id="defaultTax" min="0" value="11">
+          </div>
+        </div>
+
+        <div class="actions two-btn">
+          <button type="submit" class="btn primary"><i data-lucide="save"></i><span>Simpan Profil</span></button>
+          <button type="button" class="btn ghost" onclick="toggleTheme()"><i data-lucide="moon-star"></i><span>Ganti Tema</span></button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="tabbar">
+      <a href="index.html"><i data-lucide="home"></i><span>Beranda</span></a>
+      <a href="report.html"><i data-lucide="bar-chart-3"></i><span>Rekap</span></a>
+      <a href="profile.html" class="active"><i data-lucide="settings"></i><span>Profil</span></a>
+    </footer>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
